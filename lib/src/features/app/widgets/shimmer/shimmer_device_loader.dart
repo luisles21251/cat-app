@@ -8,7 +8,7 @@ class ShimmerImage extends StatelessWidget {
     return Container(
       width: MediaQuery.of(context).size.width,
       height: 100.0,
-      margin: EdgeInsets.all(8),
+      margin: const EdgeInsets.all(8),
       child: Shimmer.fromColors(
         baseColor: Colors.blueGrey,
         highlightColor: Colors.blueGrey.shade100,
@@ -18,17 +18,17 @@ class ShimmerImage extends StatelessWidget {
              Row(
                children: [
                  Container(
-                   margin: EdgeInsets.only(left: 12, right: 6),
+                   margin: const EdgeInsets.only(left: 12, right: 6),
                    height: 35,
                    decoration: BoxDecoration(shape: BoxShape.circle, color: Colors.grey.shade50),
                  ),
-                 Container(
+                 SizedBox(
                    width: 180,
                    child: Column(
                      mainAxisAlignment: MainAxisAlignment.start,
                      crossAxisAlignment: CrossAxisAlignment.start,
                      children: [
-                       SizedBox(
+                       const SizedBox(
                          height: 6,
                        ),
                        Container(
@@ -36,7 +36,7 @@ class ShimmerImage extends StatelessWidget {
                          height: 10,
                          color: Colors.grey,
                        ),
-                       SizedBox(
+                       const SizedBox(
                          height: 6,
                        ),
                        Container(

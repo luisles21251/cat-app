@@ -1,4 +1,3 @@
-import 'package:cat_flutter_project/injecction_container.dart';
 import 'package:cat_flutter_project/src/core/settings/app_colors.dart';
 import 'package:cat_flutter_project/src/core/settings/app_fonts.dart';
 import 'package:cat_flutter_project/src/features/app/controllers/home_controller.dart';

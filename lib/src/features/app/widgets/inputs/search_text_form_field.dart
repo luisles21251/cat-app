@@ -78,22 +78,22 @@ class _SearchTextFormFieldState extends State<SearchTextFormField> {
           ],
           decoration: InputDecoration(
             contentPadding: EdgeInsets.symmetric(horizontal: 10, vertical: 20),
-            hintStyle: TextStyle(
+            hintStyle: const TextStyle(
               color: AppColors.grey,
             ),
             hintText: widget.placeholder,
             hintMaxLines: 1,
-            enabledBorder: OutlineInputBorder(
+            enabledBorder: const OutlineInputBorder(
                 borderSide:
-                    const BorderSide(color: AppColors.blackFirst, width: 1.5),
+                    BorderSide(color: AppColors.blackFirst, width: 1.5),
                 borderRadius: BorderRadius.all(Radius.circular(6))),
-            disabledBorder: OutlineInputBorder(
+            disabledBorder: const OutlineInputBorder(
                 borderSide:
-                    const BorderSide(color: AppColors.blackFirst, width: 1.5),
+                    BorderSide(color: AppColors.blackFirst, width: 1.5),
                 borderRadius: BorderRadius.all(Radius.circular(6))),
-            focusedBorder: OutlineInputBorder(
+            focusedBorder: const OutlineInputBorder(
                 borderSide:
-                    const BorderSide(color: AppColors.blackFirst, width: 2),
+                    BorderSide(color: AppColors.blackFirst, width: 2),
                 borderRadius: BorderRadius.all(Radius.circular(6))),
             suffixIcon: Container(
               margin: EdgeInsets.only(right: 6.w),

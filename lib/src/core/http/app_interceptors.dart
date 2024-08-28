@@ -39,11 +39,11 @@ class AppInterceptors extends Interceptor {
         log("ENTRO EN EL CASE RESPONSE", name: "DioErrorType.response");
         errorDescription = "Received invalid status code: ${err.response?.statusCode} ";
         // INVALID_CUSTOMER
-        const invalidCustomer = "INVALID_CUSTOMER";
+        /*const invalidCustomer = "INVALID_CUSTOMER";
         const loginInvalid = "LOGIN_INVALID";
         const invalidUserProfile = "INVALID_USER_PROFILE";
         const userExists = "user_exists";
-        //const UNAUTHORIZED = "UNAUTHORIZED";
+        //const UNAUTHORIZED = "UNAUTHORIZED";*/
         var code = "";
         if (err.response?.data.containsKey('code')) {
           code = err.response?.data['code'];

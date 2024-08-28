@@ -6,6 +6,7 @@ enum InputOnlyCharacterError {
   noLetters,
 }
 
+
 class InputOnlyCharacter extends FormzInput<String, InputOnlyCharacterError> {
   String? _messageError;
 

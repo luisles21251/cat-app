@@ -1,8 +1,6 @@
 
 
-import 'package:cat_flutter_project/injecction_container.dart';
 import 'package:cat_flutter_project/src/features/app/bindings/home_binding.dart';
-import 'package:cat_flutter_project/src/features/app/controllers/home_controller.dart';
 import 'package:cat_flutter_project/src/features/app/pages/home/home_page.dart';
 import 'package:cat_flutter_project/src/features/app/pages/initial/welcome_page.dart';
 import 'package:flutter/material.dart';
