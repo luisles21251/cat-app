@@ -19,48 +19,64 @@ class DetailBreedPage extends StatelessWidget {
       appBar: AppBarDefault(
         title: '${catData?.name}',
       ),
-      body: Column(
-        children: [
-          SizedBox(height: 20.h,),
-          SizedBox(
-              height: 250.h,
-              width: double.infinity,
-              child: Image.network('${catData?.imageCat?.url}')),
-         Padding(
-           padding:  EdgeInsets.symmetric(horizontal: 14.w),
-           child: ListBody(
-             children: [
-               SizedBox(height: 12.h,),
-               Row(
-                 children: [
-                 Text('Origin: ', style: AppFonts.pTextW5S15,),
-                 Text(catData?.origin ??'', style: AppFonts.pTextW5S15,),
-               ],),
-               SizedBox(height: 8.h,),
-               Row(
-                 children: [
-                   Text('Weigth: ', style: AppFonts.pTextW5S15,),
-                   Text(catData?.weigthCat?.metric ??'', style: AppFonts.pTextW5S15,),
-                 ],),
-               SizedBox(height: 8.h,),
-               Row(
-                 children: [
-                   Text('Intelligence: ', style: AppFonts.pTextW5S15,),
-                   BarProgress(valor: catData?.intelligence??0)
-                 ],),
-               SizedBox(height: 8.h,),
-               Row(
-                 children: [
-                   Text('Energy: ', style: AppFonts.pTextW5S15,),
-                   BarProgress(valor: catData?.intelligence??0)
-                 ],),
-               SizedBox(height: 12.h,),
-               Text(catData?.description??'',style: AppFonts.pTextW5S15)
-             ],
-           ),
-         )
-
-        ],)
+      body: SafeArea(
+        child:ListView(
+          shrinkWrap: true,
+          children: [
+            SizedBox(height: 20.h,),
+            Padding(
+              padding:  EdgeInsets.symmetric(horizontal:14.w),
+              child: SizedBox(
+                  height: 250.h,
+                  width: double.infinity,
+                  child: Image.network('${catData?.imageCat?.url}', fit: BoxFit.fill,)),
+            ),
+            Padding(
+              padding:  EdgeInsets.symmetric(horizontal: 14.w),
+              child: SizedBox(
+                height: MediaQuery.of(context).size.height - 170,
+                child: CustomScrollView(
+                  slivers: [
+                    SliverList(
+                      delegate: SliverChildListDelegate(
+                          [
+                            SizedBox(height: 12.h,),
+                            Row(
+                              children: [
+                                Text('Origin: ', style: AppFonts.pTextW5S15,),
+                                Text(catData?.origin ??'', style: AppFonts.pTextW5S15,),
+                              ],),
+                            SizedBox(height: 8.h,),
+                            Row(
+                              children: [
+                                Text('Weigth: ', style: AppFonts.pTextW5S15,),
+                                Text(catData?.weigthCat?.metric ??'', style: AppFonts.pTextW5S15,),
+                              ],),
+                            SizedBox(height: 8.h,),
+                            Row(
+                              children: [
+                                Text('Intelligence: ', style: AppFonts.pTextW5S15,),
+                                BarProgress(valor: catData?.intelligence??0)
+                              ],),
+                            SizedBox(height: 8.h,),
+                            Row(
+                              children: [
+                                Text('Energy: ', style: AppFonts.pTextW5S15,),
+                                BarProgress(valor: catData?.intelligence??0)
+                              ],),
+                            SizedBox(height: 12.h,),
+                            Text('${catData?.description}', style: AppFonts.pTextW5S15)
+                          ]
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            )
+          ],)
+      )
     );
   }
 }
+
+

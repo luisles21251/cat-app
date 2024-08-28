@@ -42,7 +42,7 @@ class _SplashScreenState extends State<SplashScreen> {
                   left: 100.w,
                   child: Text('CATS WORLD',style: AppFonts.pTextW7S22, textAlign: TextAlign.center,)),
               Positioned(
-                  left: 100.w,
+                  left: 120.w,
                   bottom: 170.h,
                   child:  Text('Bienvenido',style: AppFonts.pTextW7S22,textAlign: TextAlign.center,)),
             ],

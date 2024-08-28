@@ -39,6 +39,8 @@ class HomePage extends StatelessWidget {
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 24.w, vertical: 16.h),
                 child: TextFormFieldOutline(
+                  hintText: 'Search breed',
+                    suffixIcon: Icon(Icons.search),
                     controller:ctrl.searchCtrl,
                   onChanged: ctrl.changeSearch,
                 ),

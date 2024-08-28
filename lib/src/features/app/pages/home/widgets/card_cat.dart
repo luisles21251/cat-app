@@ -49,12 +49,19 @@ class _CardCatState extends State<CardCat> {
             ],
           ),
           SizedBox(height: 6.h,),
-          SizedBox(
-                height: 180.h,
-                width: double.infinity,
-                child: widget.catData?.imageCat?.url == null ? const  ShimmerImage() :
-                Image.network(widget.catData!.imageCat!.url!, fit: BoxFit.fill,),
+          Container(
+            height: 180.h,
+            width: double.infinity,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(12.r),
+              image: DecorationImage(
+                image: widget.catData?.imageCat?.url == null
+                    ? const AssetImage('assets/images/placeholder.png') as ImageProvider
+                    : NetworkImage(widget.catData!.imageCat!.url!),
+                fit: BoxFit.fill,
               ),
+            ),
+          ),
           SizedBox(height: 12.h,),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
